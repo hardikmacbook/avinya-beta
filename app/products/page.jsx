@@ -62,7 +62,11 @@ const Shop = () => {
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = filteredData.slice(indexOfFirstProduct, indexOfLastProduct);
   const totalPages = Math.ceil(filteredData.length / productsPerPage);
-  const paginate = (page) => setCurrentPage(page);
+  const paginate = (page) => {
+    setCurrentPage(page);
+    // Scroll to top when page changes
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const clearFilters = () => {
     setSearchTerm("");
@@ -85,7 +89,7 @@ const Shop = () => {
       <Navbar />
       
       {/* Breadcrumb */}
-      <div className="bg-white shadow-sm border-b border-[#d2af6f]/30">
+      <div className="bg-white shadow-sm">
         <div className="container mx-auto max-w-7xl px-4 py-3">
           <nav className="flex items-center space-x-2 text-sm text-gray-600">
             <Link href="/" className="flex items-center hover:text-[#8b2727] transition-colors">
@@ -225,34 +229,42 @@ const Shop = () => {
         </div>
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex justify-center items-center space-x-2">
-            <button
-              onClick={() => paginate(currentPage - 1)}
-              disabled={currentPage === 1}
-              className="px-4 py-2 bg-[#d2af6f] border border-[#d2af6f]/30 rounded-lg hover:bg-[#8b2727] disabled:opacity-50 disabled:cursor-not-allowed transition-colors cursor-pointer hover:text-white"
-            >
-              Previous
-            </button>
-            {[...Array(Math.min(totalPages, 5))].map((_, index) => {
-              const pageNumber = currentPage <= 3 ? index + 1 : currentPage - 2 + index;
-              if (pageNumber > totalPages) return null;
-              return (
-                <button
-                  key={pageNumber}
-                  onClick={() => paginate(pageNumber)}
-                  className={`px-4 py-2 border rounded-lg transition-colors ${currentPage === pageNumber ? "bg-[#8b2727] text-white border-[#8b2727]" : "bg-white border-[#d2af6f]/30 hover:bg-[#8b2727] hover:text-white cursor-pointer"}`}
-                >
-                  {pageNumber}
-                </button>
-              );
-            })}
-            <button
-              onClick={() => paginate(currentPage + 1)}
-              disabled={currentPage === totalPages}
-              className="px-4 py-2 bg-[#d2af6f] border border-[#d2af6f]/30 rounded-lg hover:bg-[#8b2727] hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors cursor-pointer"
-            >
-              Next
-            </button>
+          <div className="flex justify-center items-center space-x-2 px-4 overflow-x-auto">
+            <div className="flex items-center space-x-2 min-w-max">
+              <button
+                onClick={() => paginate(currentPage - 1)}
+                disabled={currentPage === 1}
+                className="px-3 py-2 bg-[#d2af6f] border border-[#d2af6f]/30 rounded-lg hover:bg-[#8b2727] disabled:opacity-50 disabled:cursor-not-allowed transition-colors cursor-pointer hover:text-white text-sm whitespace-nowrap"
+              >
+                Previous
+              </button>
+              <div className="flex items-center space-x-1">
+                {[...Array(Math.min(totalPages, 5))].map((_, index) => {
+                  const pageNumber = currentPage <= 3 ? index + 1 : currentPage - 2 + index;
+                  if (pageNumber > totalPages) return null;
+                  return (
+                    <button
+                      key={pageNumber}
+                      onClick={() => paginate(pageNumber)}
+                      className={`px-3 py-2 border rounded-lg transition-colors text-sm min-w-[40px] ${
+                        currentPage === pageNumber 
+                          ? "bg-[#8b2727] text-white border-[#8b2727]" 
+                          : "bg-white border-[#d2af6f]/30 hover:bg-[#8b2727] hover:text-white cursor-pointer"
+                      }`}
+                    >
+                      {pageNumber}
+                    </button>
+                  );
+                })}
+              </div>
+              <button
+                onClick={() => paginate(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className="px-3 py-2 bg-[#d2af6f] border border-[#d2af6f]/30 rounded-lg hover:bg-[#8b2727] hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors cursor-pointer text-sm whitespace-nowrap"
+              >
+                Next
+              </button>
+            </div>
           </div>
         )}
         {/* No Results */}
