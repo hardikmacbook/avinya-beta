@@ -1,0 +1,251 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "name": "Schneider Electric",
+      "description": "Global leader in energy management and industrial automation solutions",
+      "logo": "/assets/images/schneider-logo.svg",
+      "priceLists": [
+        {
+          "id": 1,
+          "title": "Industrial Automation & Control",
+          "description": "PLCs, HMIs, drives, and industrial control systems",
+          "pdfUrl": "/pdfs/Final-Distribution-and-Wiring-Devices_Pricelist-2025.pdf",
+          "lastUpdated": "2024-08-15"
+        },
+        {
+          "id": 2,
+          "title": "Power Distribution & Protection",
+          "description": "Circuit breakers, contactors, and power distribution equipment",
+          "pdfUrl": "/pdfs/schneider-power-distribution.pdf",
+          "lastUpdated": "2024-09-01"
+        },
+        {
+          "id": 3,
+          "title": "Energy Management Solutions",
+          "description": "Energy meters, monitoring systems, and power quality equipment",
+          "pdfUrl": "/pdfs/schneider-energy-management.pdf",
+          "lastUpdated": "2024-08-28"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Larsen & Toubro",
+      "description": "Leading Indian multinational engaged in technology, engineering, construction, and manufacturing",
+      "logo": "/assets/images/larsen-toubro-logo.svg",
+      "priceLists": [
+        {
+          "id": 4,
+          "title": "Switchgear & Control Gear",
+          "description": "Low voltage and medium voltage switchgear solutions",
+          "pdfUrl": "/pdfs/lt-switchgear-control.pdf",
+          "lastUpdated": "2024-07-20"
+        },
+        {
+          "id": 5,
+          "title": "Motor Control Centers",
+          "description": "MCC panels and motor protection systems",
+          "pdfUrl": "/pdfs/lt-motor-control-centers.pdf",
+          "lastUpdated": "2024-08-10"
+        },
+        {
+          "id": 6,
+          "title": "Power Systems Equipment",
+          "description": "Transformers, generators, and power system solutions",
+          "pdfUrl": "/pdfs/lt-power-systems.pdf",
+          "lastUpdated": "2024-09-05"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Siemens",
+      "description": "German multinational technology company focusing on industry, energy, and healthcare",
+      "logo": "/assets/images/siemens-logo.svg",
+      "priceLists": [
+        {
+          "id": 7,
+          "title": "SIMATIC Automation Systems",
+          "description": "SIMATIC PLCs, HMI panels, and industrial PCs",
+          "pdfUrl": "/pdfs/siemens-simatic-automation.pdf",
+          "lastUpdated": "2024-08-25"
+        },
+        {
+          "id": 8,
+          "title": "SINAMICS Drives & Motors",
+          "description": "Variable frequency drives and servo motors",
+          "pdfUrl": "/pdfs/siemens-sinamics-drives.pdf",
+          "lastUpdated": "2024-09-12"
+        },
+        {
+          "id": 9,
+          "title": "Low Voltage Products",
+          "description": "Circuit protection, switching, and measuring devices",
+          "pdfUrl": "/pdfs/siemens-low-voltage.pdf",
+          "lastUpdated": "2024-08-30"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "ABB",
+      "description": "Swiss-Swedish multinational technology company specializing in robotics, power, and automation",
+      "logo": "/assets/images/abb-logo.svg",
+      "priceLists": [
+        {
+          "id": 10,
+          "title": "AC & DC Drives",
+          "description": "Variable speed drives for industrial applications",
+          "pdfUrl": "/pdfs/abb-drives-catalog.pdf",
+          "lastUpdated": "2024-09-08"
+        },
+        {
+          "id": 11,
+          "title": "Low Voltage Products",
+          "description": "MCCBs, ACBs, contactors, and protection relays",
+          "pdfUrl": "/pdfs/abb-low-voltage-products.pdf",
+          "lastUpdated": "2024-08-18"
+        },
+        {
+          "id": 12,
+          "title": "Industrial Robotics",
+          "description": "Robot arms, controllers, and automation solutions",
+          "pdfUrl": "/pdfs/abb-industrial-robotics.pdf",
+          "lastUpdated": "2024-09-15"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "BCH Electric",
+      "description": "Leading manufacturer of electrical switchgear and automation products",
+      "logo": "/assets/images/bch-logo.svg",
+      "priceLists": [
+        {
+          "id": 13,
+          "title": "LT Switchgear",
+          "description": "Low tension panels and distribution boards",
+          "pdfUrl": "/pdfs/bch-lt-switchgear.pdf",
+          "lastUpdated": "2024-07-25"
+        },
+        {
+          "id": 14,
+          "title": "Control & Automation",
+          "description": "Control panels and automation components",
+          "pdfUrl": "/pdfs/bch-control-automation.pdf",
+          "lastUpdated": "2024-08-12"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Autonics",
+      "description": "Korean manufacturer of industrial automation sensors and controllers",
+      "logo": "/assets/images/autonics-logo.svg",
+      "priceLists": [
+        {
+          "id": 15,
+          "title": "Sensors & Detectors",
+          "description": "Proximity sensors, photoelectric sensors, and limit switches",
+          "pdfUrl": "/pdfs/autonics-sensors-detectors.pdf",
+          "lastUpdated": "2024-08-20"
+        },
+        {
+          "id": 16,
+          "title": "Controllers & Timers",
+          "description": "Temperature controllers, counters, and timer relays",
+          "pdfUrl": "/pdfs/autonics-controllers-timers.pdf",
+          "lastUpdated": "2024-09-03"
+        },
+        {
+          "id": 17,
+          "title": "Motion Control",
+          "description": "Stepper motors, servo motors, and motion controllers",
+          "pdfUrl": "/pdfs/autonics-motion-control.pdf",
+          "lastUpdated": "2024-08-28"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Selec",
+      "description": "Indian manufacturer of industrial instrumentation and automation products",
+      "logo": "/assets/images/selec-logo.svg",
+      "priceLists": [
+        {
+          "id": 18,
+          "title": "Digital Panel Meters",
+          "description": "Multifunction meters, energy meters, and display units",
+          "pdfUrl": "/pdfs/selec-digital-panel-meters.pdf",
+          "lastUpdated": "2024-08-22"
+        },
+        {
+          "id": 19,
+          "title": "Process Controllers",
+          "description": "Temperature controllers, PID controllers, and process indicators",
+          "pdfUrl": "/pdfs/selec-process-controllers.pdf",
+          "lastUpdated": "2024-09-10"
+        },
+        {
+          "id": 20,
+          "title": "Switching Power Supplies",
+          "description": "SMPS units and DIN rail power supplies",
+          "pdfUrl": "/pdfs/selec-power-supplies.pdf",
+          "lastUpdated": "2024-08-15"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Multispan",
+      "description": "Specialist in electrical measurement and protection systems",
+      "logo": "/assets/images/multispan-logo.svg",
+      "priceLists": [
+        {
+          "id": 21,
+          "title": "Energy Meters & Monitors",
+          "description": "Single and three-phase energy meters with communication",
+          "pdfUrl": "/pdfs/multispan-energy-meters.pdf",
+          "lastUpdated": "2024-08-18"
+        },
+        {
+          "id": 22,
+          "title": "Protection Relays",
+          "description": "Over current, earth fault, and differential protection relays",
+          "pdfUrl": "/pdfs/multispan-protection-relays.pdf",
+          "lastUpdated": "2024-09-02"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Chint Electric",
+      "description": "Chinese multinational electrical equipment manufacturer",
+      "logo": "/assets/images/chint-logo.svg",
+      "priceLists": [
+        {
+          "id": 23,
+          "title": "Circuit Breakers & Protection",
+          "description": "MCBs, RCCBs, MCCBs, and surge protection devices",
+          "pdfUrl": "/pdfs/chint-circuit-breakers.pdf",
+          "lastUpdated": "2024-09-05"
+        },
+        {
+          "id": 24,
+          "title": "Contactors & Relays",
+          "description": "AC/DC contactors, overload relays, and auxiliary contacts",
+          "pdfUrl": "/pdfs/chint-contactors-relays.pdf",
+          "lastUpdated": "2024-08-25"
+        },
+        {
+          "id": 25,
+          "title": "Inverters & Soft Starters",
+          "description": "Variable frequency drives and motor soft starters",
+          "pdfUrl": "/pdfs/chint-inverters-softstarters.pdf",
+          "lastUpdated": "2024-09-08"
+        }
+      ]
+    }
+  ]
+}
