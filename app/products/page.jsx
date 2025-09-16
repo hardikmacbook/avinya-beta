@@ -189,7 +189,7 @@ const Shop = () => {
               className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#d2af6f]/20 hover:border-[#8b2727] p-6"
             >
               <Link
-                href={`/shop/${createSlug(product.title)}`}
+                href={`/products/${createSlug(product.title)}`}
                 className="w-full h-48 mb-4 bg-gradient-to-br from-[#f8f3e9] to-[#f0e6d2] rounded-xl flex items-center justify-center overflow-hidden group"
               >
                 <img
