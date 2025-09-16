@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Search, Filter, Grid, List, ChevronDown, Star, Home, ChevronRight } from "lucide-react";
+import { Search, Filter, ChevronDown, Star, Home, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import Navbar from "../../componets/Header/Navbar"; // Adjust the path as necessary
 
@@ -13,7 +13,6 @@ const Shop = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedBrand, setSelectedBrand] = useState("all");
   const [sortBy, setSortBy] = useState("default");
-  const [viewMode, setViewMode] = useState("grid");
   const [showFilters, setShowFilters] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(12);
@@ -82,6 +81,9 @@ const Shop = () => {
 
   return (
     <div className="bg-gradient-to-br from-[#f8f3e9] to-[#f0e6d2]">
+      {/* Add Navbar component */}
+      <Navbar />
+      
       {/* Breadcrumb */}
       <div className="bg-white shadow-sm border-b border-[#d2af6f]/30">
         <div className="container mx-auto max-w-7xl px-4 py-3">
@@ -117,20 +119,6 @@ const Shop = () => {
               Filters
               <ChevronDown className={`w-4 h-4 transition-transform ${showFilters ? "rotate-180" : ""}`} />
             </button>
-            <div className="flex border border-gray-200 rounded-xl overflow-hidden">
-              <button
-                onClick={() => setViewMode("grid")}
-                className={`p-3 ${viewMode === "grid" ? "bg-[#8b2727] text-white" : "bg-gray-50 text-gray-600 hover:bg-gray-100 cursor-pointer"} transition-colors`}
-              >
-                <Grid className="w-5 h-5" />
-              </button>
-              <button
-                onClick={() => setViewMode("list")}
-                className={`p-3 ${viewMode === "list" ? "bg-[#8b2727] text-white" : "bg-gray-50 text-gray-600 hover:bg-gray-100 cursor-pointer"} transition-colors`}
-              >
-                <List className="w-5 h-5" />
-              </button>
-            </div>
           </div>
           {/* Filters Panel */}
           {showFilters && (
@@ -189,22 +177,16 @@ const Shop = () => {
             </div>
           )}
         </div>
-        {/* Products Grid/List */}
-        <div 
-          className={`${viewMode === "grid"
-            ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-            : "space-y-4"} mb-8`}
-        >
+        {/* Products Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
           {currentProducts.map((product) => (
             <div
               key={product.id}
-              className={`bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#d2af6f]/20 hover:border-[#8b2727] ${viewMode === "list" ? "flex p-4" : "p-6"}`}
+              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#d2af6f]/20 hover:border-[#8b2727] p-6"
             >
               <Link
                 href={`/shop/${createSlug(product.title)}`}
-                className={`${viewMode === "list"
-                  ? "w-48 h-32 flex-shrink-0 mr-6"
-                  : "w-full h-48 mb-4"} bg-gradient-to-br from-[#f8f3e9] to-[#f0e6d2] rounded-xl flex items-center justify-center overflow-hidden group`}
+                className="w-full h-48 mb-4 bg-gradient-to-br from-[#f8f3e9] to-[#f0e6d2] rounded-xl flex items-center justify-center overflow-hidden group"
               >
                 <img
                   className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
@@ -212,11 +194,11 @@ const Shop = () => {
                   alt={product.title}
                 />
               </Link>
-              <div className={`${viewMode === "list" ? "flex-1" : ""}`}>
+              <div>
                 <div className="flex items-start justify-between mb-2">
                   <h3 className="text-lg font-semibold text-gray-800 leading-tight">
-                    {product.title.length > (viewMode === "list" ? 50 : 25)
-                      ? product.title.slice(0, viewMode === "list" ? 50 : 25) + "..."
+                    {product.title.length > 25
+                      ? product.title.slice(0, 25) + "..."
                       : product.title}
                   </h3>
                   <div className="flex items-center bg-[#f8f3e9] px-2 py-1 rounded-full">
@@ -230,8 +212,8 @@ const Shop = () => {
                   </div>
                 )}
                 <p className="text-sm text-gray-600 mb-3 line-clamp-2">
-                  {product.description.length > (viewMode === "list" ? 120 : 80)
-                    ? product.description.slice(0, viewMode === "list" ? 120 : 80) + "..."
+                  {product.description.length > 80
+                    ? product.description.slice(0, 80) + "..."
                     : product.description}
                 </p>
                 <div className="flex items-center justify-between mb-4">
