@@ -21,12 +21,13 @@ export default function Contact() {
     {
       name: "Vapi Office",
       phone: "+91 87993 60195",
+      // phone2: "+91 9945768163",
       email: "avinyaelectricals@gmail.com",
       address:
-        "C-106, 1st Floor, City Center, Silvassa - Vapi Rd, Bhadakmora, Phase 1, GIDC, Vapi, Gujarat 396195",
+        "Gala No.13, Millennum Marble Ind., Remi, Plot No.129/1, Silvassa - Vapi Rd, opp. Shah Paper Mill, GIDC, Vapi, Gujarat 396195",
       mapUrl: "https://maps.app.goo.gl/MDosEmQbCgSExxmQA",
       embedUrl:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.583480187053!2d72.92287887534829!3d20.358818681128056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0cf76e189a241%3A0xa033c44944bd0706!2sAvinya%20Electricals!5e0!3m2!1sen!2sin!4v1751862032833!5m2!1sen!2sin",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.531410908713!2d72.92254837533764!3d20.36096788112652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0cf76e189a241%3A0xa033c44944bd0706!2sAvinya%20Electricals!5e0!3m2!1sen!2sin!4v1758116904862!5m2!1sen!2sin",
       hours: "Mon - Sat: 9 AM to 6:30 PM",
     },
     {
@@ -435,6 +436,7 @@ export default function Contact() {
                     <h4 className="font-bold text-slate-900 mb-2 text-base sm:text-lg">
                       Phone
                     </h4>
+                    
                     <p className="text-sm sm:text-base text-slate-600 mb-2">
                       Call us directly
                     </p>
@@ -443,7 +445,13 @@ export default function Contact() {
                       className="text-lg sm:text-xl font-bold text-slate-900 hover:text-slate-700 transition-colors"
                     >
                       {offices[activeOffice].phone}
-                    </a>
+                    </a> <br/>
+                    {/* <a
+                      href={`tel:${offices[activeOffice].phone2}`}
+                      className="text-lg sm:text-xl font-bold text-slate-900 hover:text-slate-700 transition-colors"
+                    >
+                      {offices[activeOffice].phone2}
+                    </a> */}
                   </div>
                 </div>
 

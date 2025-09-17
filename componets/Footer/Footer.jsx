@@ -90,18 +90,6 @@ function Footer() {
                     </div>
                     <span className="text-sm">+91 87993 60195</span>
                   </Link>
-
-                  <Link
-                    href="https://maps.app.goo.gl/BefToyT4nEjuPh2x8"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-3 text-gray-700 hover:text-gray-900 transition-colors duration-200"
-                  >
-                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
-                      <MapPin size={14} />
-                    </div>
-                    <span className="text-sm">Vapi, Gujarat</span>
-                  </Link>
                 </div>
               </div>
             </div>
